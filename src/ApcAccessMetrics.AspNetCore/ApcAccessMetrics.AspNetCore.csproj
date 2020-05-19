@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
-    <ProjectReference Include="..\ApcAccessMetrcs.Common\ApcAccessMetrcs.Common.csproj" />
+    <ProjectReference Include="..\ApcAccessMetrics.Common\ApcAccessMetrics.Common.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

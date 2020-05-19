@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{70DEA9AC-968C-48CE-A33A-CC1968A429CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApcAccessMetrcs.AspNetCore", "src\ApcAccessMetrcs.AspNetCore\ApcAccessMetrcs.AspNetCore.csproj", "{905DF605-8E26-4612-A930-1784208B09DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApcAccessMetrics.AspNetCore", "src\ApcAccessMetrics.AspNetCore\ApcAccessMetrics.AspNetCore.csproj", "{905DF605-8E26-4612-A930-1784208B09DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApcAccessMetrcs.Common", "src\ApcAccessMetrcs.Common\ApcAccessMetrcs.Common.csproj", "{2387FB8F-9B4D-4FE6-AB0B-20443712AF46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApcAccessMetrics.Common", "src\ApcAccessMetrics.Common\ApcAccessMetrics.Common.csproj", "{2387FB8F-9B4D-4FE6-AB0B-20443712AF46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
