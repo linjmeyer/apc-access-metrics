@@ -9,7 +9,7 @@ namespace ApcAccessMetrics.Common.Tests
         [Fact]
         public void ColonKeyValueDeserializerTestDict()
         {
-            var text = @"APC      : 001,036,0882
+            var text = @"aAPC      : 001,036,0882
                             DATE     : 2020-05-27 20:37:07 -0500  
                             HOSTNAME : raspberrypi
                                  VERSION  : 3.14.14 (31 May 2016) debian

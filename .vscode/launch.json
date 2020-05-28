@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/ApcAccessMetrcs.AspNetCore/bin/Debug/netcoreapp3.1/ApcAccessMetrcs.AspNetCore.dll",
+            "program": "${workspaceFolder}/src/ApcAccessMetrics.AspNetCore/bin/Debug/netcoreapp3.1/ApcAccessMetrics.AspNetCore.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System;
+using Newtonsoft.Json;
 
 namespace ApcAccessMetrics.Common.DeSerializer
 {
@@ -15,10 +16,10 @@ namespace ApcAccessMetrics.Common.DeSerializer
                 while ((line = reader.ReadLine()) != null)
                 {
                     if(String.IsNullOrWhiteSpace(line)) continue;
-
-                    var colon = text.IndexOf(':');
-                    var pre = text.Substring(0, colon-1);
-                    var post = text.Substring(colon, line.Length);
+                    
+                    var colon = line.IndexOf(':');
+                    var pre = line.Substring(0, colon-1);
+                    var post = line.Substring(colon + 1, line.Length - colon - 1);
 
                     if(!String.IsNullOrWhiteSpace(pre))
                     {
@@ -28,6 +29,13 @@ namespace ApcAccessMetrics.Common.DeSerializer
             }
 
             return dict;
+        }
+
+        public T Deserialize<T>(string text)
+        {
+            var dict = Deserialize(text);
+            var dictJson = JsonConvert.SerializeObject(dict);
+            return JsonConvert.DeserializeObject<T>(dictJson);
         }
     }
 }
