@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApcAccessMetrics.AspNetCore
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApcAccessMetrics.Common", "src\ApcAccessMetrics.Common\ApcAccessMetrics.Common.csproj", "{2387FB8F-9B4D-4FE6-AB0B-20443712AF46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApcAccessMetrics.Common.Tests", "src\ApcAccessMetrics.Common.Tests\ApcAccessMetrics.Common.Tests.csproj", "{B6355730-22D9-4E1A-B54B-F38D411D731E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,9 +48,22 @@ Global
 		{2387FB8F-9B4D-4FE6-AB0B-20443712AF46}.Release|x64.Build.0 = Release|Any CPU
 		{2387FB8F-9B4D-4FE6-AB0B-20443712AF46}.Release|x86.ActiveCfg = Release|Any CPU
 		{2387FB8F-9B4D-4FE6-AB0B-20443712AF46}.Release|x86.Build.0 = Release|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Debug|x64.Build.0 = Debug|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Debug|x86.Build.0 = Debug|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Release|x64.ActiveCfg = Release|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Release|x64.Build.0 = Release|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Release|x86.ActiveCfg = Release|Any CPU
+		{B6355730-22D9-4E1A-B54B-F38D411D731E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{905DF605-8E26-4612-A930-1784208B09DA} = {70DEA9AC-968C-48CE-A33A-CC1968A429CB}
 		{2387FB8F-9B4D-4FE6-AB0B-20443712AF46} = {70DEA9AC-968C-48CE-A33A-CC1968A429CB}
+		{B6355730-22D9-4E1A-B54B-F38D411D731E} = {70DEA9AC-968C-48CE-A33A-CC1968A429CB}
 	EndGlobalSection
 EndGlobal
