@@ -3,8 +3,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using ApcAccessMetrics.Common.DeSerializer;
+using ApcAccessMetrics.Common.Deserializer;
 using ApcAccessMetrcs.Common.Apc;
+using ApcAccessMetrcs.Common.Commands;
+using System.Collections.Generic;
 
 namespace ApcAccessMetrcs.AspNetCore
 {
@@ -13,7 +15,8 @@ namespace ApcAccessMetrcs.AspNetCore
 
         private readonly ILogger<ApcAccessBackgroundService> _logger;
         private Timer _timer;
-        private ColonKeyValueDeSerializer _deserializer;
+        private ColonKeyValueDeserializer _deserializer;
+        private ApcAccessCommand _apcAccessCommand; 
 
         public ApcAccessBackgroundService(ILogger<ApcAccessBackgroundService> logger)
         {
@@ -24,14 +27,15 @@ namespace ApcAccessMetrcs.AspNetCore
         {
             _logger.LogInformation($"{nameof(ApcAccessBackgroundService)} running.");
             _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(5));
-            _deserializer = new ColonKeyValueDeSerializer();
+            _deserializer = new ColonKeyValueDeserializer();
+            _apcAccessCommand = new ApcAccessCommand();
 
             return Task.CompletedTask;
         }
 
         private void DoWork(object state)
         {
-            var text = @"Status : Online";
+            var text = _apcAccessCommand.Run();
             var dict = _deserializer.Deserialize<ApcStatus>(text);
         }
 

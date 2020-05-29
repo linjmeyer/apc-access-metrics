@@ -3,9 +3,9 @@ using System.IO;
 using System;
 using Newtonsoft.Json;
 
-namespace ApcAccessMetrics.Common.DeSerializer
+namespace ApcAccessMetrics.Common.Deserializer
 {
-    public class ColonKeyValueDeSerializer
+    public class ColonKeyValueDeserializer
     {
         public Dictionary<string, string> Deserialize(string text)
         {
