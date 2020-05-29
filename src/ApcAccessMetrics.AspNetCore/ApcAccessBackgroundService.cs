@@ -7,6 +7,8 @@ using ApcAccessMetrics.Common.Deserializer;
 using ApcAccessMetrcs.Common.Apc;
 using ApcAccessMetrcs.Common.Commands;
 using System.Collections.Generic;
+using System.Linq;
+using ApcAccessMetrics.Common.Extensions;
 
 namespace ApcAccessMetrcs.AspNetCore
 {
@@ -36,7 +38,8 @@ namespace ApcAccessMetrcs.AspNetCore
         private void DoWork(object state)
         {
             var text = _apcAccessCommand.Run();
-            var dict = _deserializer.Deserialize<ApcStatus>(text);
+            var status = _deserializer.Deserialize<ApcStatus>(text);            
+            var tags = status.GetMetricTags();
         }
 
         public Task StopAsync(CancellationToken stoppingToken)

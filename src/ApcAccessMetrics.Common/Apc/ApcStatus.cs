@@ -20,9 +20,6 @@ namespace ApcAccessMetrcs.Common.Apc
 
         [MetricTag]
         [JsonProperty("UPSNAME")]
-
         public string Name { get; set; }
-        [MetricTag]
-        public string Status { get; set; }
     }
 }

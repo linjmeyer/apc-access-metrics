@@ -66,7 +66,6 @@ namespace ApcAccessMetrics.Common.Tests
                             FIRMWARE : 931.a10.D USB FW:a1
                             END APC  : 2020-05-28 20:51:56 -0500";
             var apcStatus = new ColonKeyValueDeserializer().Deserialize<ApcStatus>(text);
-            Assert.False(String.IsNullOrWhiteSpace(apcStatus.Status));
             Assert.False(apcStatus.BatteryChargeLevel <= 0);
             Assert.False(apcStatus.TimeLeft <= 0);
             Assert.False(String.IsNullOrWhiteSpace(apcStatus.Model));
